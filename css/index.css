@@ -344,3 +344,19 @@
   }
 
 }
+
+/* ==========================================================
+   HOME | vintage soul palette + modern oversized typography
+   ========================================================== */
+.hero { background:#e6a13f; }
+.hero h1 { text-transform:uppercase; }
+.hero h1 em { color:#f9f1df; }
+.hero .eyebrow { border-top:1px solid rgba(23,23,23,.65); padding-top:12px; }
+.tile-gold { background:#e5ded0; }
+.tile-cream { background:#e6a13f; }
+.tile-dark { background:#171717; }
+.tile { border-radius:0; border:1px solid rgba(22,22,22,.12); }
+.tile:hover { outline:2px solid currentColor; outline-offset:-8px; }
+/* Album sleeve motif: thin parallel rules rather than extra ornaments. */
+.tile-lines { background:repeating-linear-gradient(0deg,transparent 0 19px,rgba(24,24,24,.22) 20px 22px); }
+.film-frame { border:1px solid #665947; }

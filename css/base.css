@@ -308,3 +308,29 @@ dialog p {
   }
 
 }
+
+/* ==========================================================
+   RETRO-MODERN BRAND SYSTEM | shared across all four pages
+   Vintage inspiration: 1960s soul sleeves; modern layout retained
+   ========================================================== */
+:root {
+  --black: #171717;
+  --orange: #d65a32;
+  --gold: #e6a13f;
+  --cream: #f4ecdd;
+  --line: #60584d;
+}
+/* Use the supplied brand logo, rather than recreated lettering. */
+.wordmark { display: inline-flex; align-items:center; width: 112px; min-width:112px; }
+.wordmark img { display:block; width:100%; height:auto; filter: invert(1); }
+.wordmark:hover img { opacity:.78; }
+/* A restrained analog print finish; no heavy distressed overlay. */
+.grain { opacity:.075; }
+/* Small editorial cues borrowed from vintage record sleeves. */
+.section-kicker, .eyebrow, .section-heading > span {
+  text-transform:uppercase; letter-spacing:.14em; font-weight:800;
+}
+.nav a { transition:color .2s ease; }
+.nav a:hover { color:var(--orange); }
+/* Preserve the bold, contemporary structure of the original site. */
+@media (max-width:640px) { .wordmark { width:88px; min-width:88px; } }
