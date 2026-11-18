@@ -1,0 +1,170 @@
+@import url('base.css');
+.page-hero {
+  background:var(--gold);
+  color:var(--black)
+}
+
+.page-hero h1 i {
+  color:var(--cream)
+}
+
+.shows-list {
+  padding:70px 4% 100px
+}
+
+.list-heading {
+  display:flex;
+  justify-content:space-between;
+  border-bottom:2px solid var(--cream);
+  padding-bottom:18px;
+  font-size:12px;
+  font-weight:900
+}
+
+.show-row {
+  display:grid;
+  grid-template-columns:1fr 3fr 1.5fr auto;
+  align-items:center;
+  gap:20px;
+  border-bottom:1px solid #69645e;
+  padding:35px 0
+}
+
+.date {
+  font-size:40px;
+  font-weight:900
+}
+
+.date span {
+  display:block;
+  font-size:12px
+}
+
+.show-title {
+  font-size:clamp(32px,4vw,65px);
+  font-weight:900;
+  letter-spacing:-.07em;
+  line-height:1
+}
+
+.show-title small {
+  display:block;
+  font-size:11px;
+  letter-spacing:0;
+  margin-top:10px;
+  color:var(--gold)
+}
+
+.show-location {
+  font-size:12px;
+  font-weight:800
+}
+
+.ticket-button,.product-button {
+  border:1px solid var(--cream);
+  background:transparent;
+  color:var(--cream);
+  border-radius:30px;
+  padding:13px 20px;
+  font-size:11px;
+  font-weight:900
+}
+
+.ticket-button:hover,.product-button:hover {
+  background:var(--gold);
+  color:var(--black)
+}
+
+.notice {
+  background:var(--orange);
+  color:var(--black);
+  display:flex;
+  align-items:center;
+  gap:30px;
+  padding:20px 4%;
+  font-weight:900
+}
+
+.notice span {
+  font-size:45px
+}
+
+.notice p {
+  margin:0;
+  font-size:12px
+}
+
+.poster-section {
+  padding:90px 4%
+}
+
+.poster-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:30px
+}
+
+.poster {
+  aspect-ratio:9/16;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  color:var(--black)
+}
+
+.poster span,.poster small {
+  font-size:11px;
+  font-weight:900
+}
+
+.poster strong {
+  font-size:clamp(40px,5vw,90px);
+  letter-spacing:-.1em;
+  line-height:.85
+}
+
+.poster-a {
+  background:var(--orange)
+}
+
+.poster-b {
+  background:var(--gold)
+}
+
+.poster-c {
+  background:var(--cream)
+}
+
+@media(max-width:800px) {
+  .show-row {
+    grid-template-columns:1fr 2fr;
+    gap:15px
+  }
+
+  .poster-grid {
+    grid-template-columns:1fr 1fr
+  }
+
+}
+
+@media(max-width:600px) {
+  .poster-grid {
+    grid-template-columns:1fr
+  }
+
+  .show-row {
+    grid-template-columns:1fr 2fr
+  }
+
+  .ticket-button {
+    grid-column:2;
+    justify-self:start
+  }
+
+  .list-heading span:last-child {
+    display:none
+  }
+
+}

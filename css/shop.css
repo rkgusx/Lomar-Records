@@ -1,0 +1,188 @@
+@import url('base.css');
+.page-hero {
+  background:var(--orange);
+  color:var(--black)
+}
+
+.page-hero h1 i {
+  color:var(--cream)
+}
+
+.shop-grid {
+  padding:70px 4% 100px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px
+}
+
+.product-visual {
+  aspect-ratio:4/5;
+  position:relative;
+  display:grid;
+  place-items:center;
+  overflow:hidden
+}
+
+.shirt {
+  background:#d6cabb
+}
+
+.tote {
+  background:var(--gold)
+}
+
+.record {
+  background:var(--orange)
+}
+
+.image-label {
+  position:absolute;
+  bottom:16px;
+  left:16px;
+  font-size:10px;
+  font-weight:900;
+  color:#111
+}
+
+.shirt-shape {
+  width:60%;
+  height:55%;
+  background:#111;
+  clip-path:polygon(23% 0,38% 0,43% 7%,57% 7%,62% 0,77% 0,100% 19%,84% 36%,78% 30%,78% 100%,22% 100%,22% 30%,16% 36%,0 19%);
+  display:grid;
+  place-items:center
+}
+
+.shirt-shape span {
+  color:var(--gold);
+  font-size:clamp(25px,4vw,65px);
+  font-weight:900;
+  letter-spacing:-.1em
+}
+
+.tote-shape {
+  position:relative;
+  width:55%;
+  height:53%;
+  background:var(--cream);
+  display:grid;
+  place-items:center;
+  box-shadow:15px 20px 0 #0002
+}
+
+.tote-shape:before {
+  content:'';
+  position:absolute;
+  width:45%;
+  height:25%;
+  border:12px solid var(--cream);
+  border-radius:50% 50% 0 0;
+  top:-22%;
+  z-index:-1
+}
+
+.tote-shape span {
+  color:#111;
+  font-size:clamp(22px,3vw,45px);
+  line-height:.9;
+  letter-spacing:-.07em;
+  font-weight:900
+}
+
+.vinyl {
+  width:75%;
+  aspect-ratio:1;
+  background:repeating-radial-gradient(circle,#0d0d0d 0 4px,#242424 5px 6px);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  box-shadow:12px 20px 20px #0005;
+  animation:spin 20s linear infinite
+}
+
+.vinyl span {
+  background:var(--gold);
+  border-radius:50%;
+  width:34%;
+  aspect-ratio:1;
+  display:grid;
+  place-items:center;
+  color:#111;
+  font-size:clamp(18px,2.8vw,38px);
+  font-weight:900;
+  letter-spacing:-.08em
+}
+
+@keyframes spin {
+  to {
+    transform:rotate(360deg)
+  }
+
+}
+
+.product-info {
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  align-items:baseline;
+  margin:18px 0
+}
+
+.product-info h2 {
+  font-size:clamp(25px,2.5vw,40px);
+  margin:0
+}
+
+.product-info span {
+  font-size:10px;
+  white-space:nowrap
+}
+
+.shop-note {
+  background:var(--cream);
+  color:var(--black);
+  padding:100px 4%
+}
+
+.shop-note h2 {
+  font-size:clamp(65px,10vw,150px)
+}
+
+.shop-note h2 i {
+  color:var(--orange)
+}
+
+@media(max-width:900px) {
+  .shop-grid {
+    grid-template-columns:1fr 1fr
+  }
+
+  .product-info {
+    display:block
+  }
+
+  .product-info span {
+    display:block;
+    margin-top:8px
+  }
+
+}
+
+@media(max-width:600px) {
+  .shop-grid {
+    grid-template-columns:1fr
+  }
+
+  .shirt-shape span {
+    font-size:60px
+  }
+
+  .tote-shape span {
+    font-size:42px
+  }
+
+  .vinyl span {
+    font-size:35px
+  }
+
+}
